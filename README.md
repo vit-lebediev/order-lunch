@@ -1,6 +1,6 @@
-#[Node-Login](http://node-login.braitsch.io)
+#Order Lunch
 
-####A basic login & account management system built in Node.js with the following features :
+####A simple application which allows to order lunch, and manage orders
 
 * New User Account Creation
 * Secure Password Reset via Email
@@ -8,6 +8,9 @@
 * Session Tracking for Logged-In Users
 * Local Cookie Storage for Returning Users
 * Blowfish-based Scheme Password Encryption
+* Place order for lunch
+* List all previous orders with their status (currently only two statuses: not accepted and accepted)
+* Administrator is able to manage orders, marking them as accepted
 
 ***
 
@@ -36,7 +39,5 @@ cd node-login
 npm install -d
 node app
 ```
-For testing purposes, I've provided a [database dump of all accounts here.](http://node-login.braitsch.io/print)  
-Please note this list and the entire database automatically resets every 24 hours.
 
 Questions and suggestions for improvement are welcome.
