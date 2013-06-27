@@ -1,0 +1,58 @@
+extends ../layout
+
+block content
+	include ../navbar
+
+	#orders-list-container
+		if orders.length > 0
+			table.table
+				thead
+					tr
+						th
+							| Дата заказа
+						th
+							| URL
+						th
+							| Первое
+						th
+							| Второе
+						th
+							| Комментарий
+						th
+							| Выполнен
+				tbody
+					each order in orders
+						if order.fullfilled
+							- var trClass = "success"
+						else
+							- var trClass = "warning"
+						tr(class="#{trClass}")
+							td
+								| #{order.created}
+							td
+								| #{order.menu_url}
+							td
+								| #{order.first_course}
+							td
+								| #{order.second_course}
+							td
+								| #{order.additional_notes}
+							td
+								if order.fullfilled
+									| Да
+								else
+									| Нет
+		else
+			| Вы еще не сделали ниодного заказа.
+
+	include ../modals/alert
+	include ../modals/confirm
+
+
+block scripts
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/jquery.form.js')
+	script(src='/vendor/bootstrap-modal.js')
+	script(src='/vendor/bootstrap-transition.js')
+	script(src='/js/views/orders.js')
+	script(src='/js/controllers/ordersController.js')

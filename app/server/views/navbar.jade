@@ -1,0 +1,16 @@
+div.navbar.navbar-fixed-top
+	div.navbar-inner
+		div.container-fluid
+			ul#global-nav.nav.pull-left
+				li
+					a(href='/home').brand Home
+				li
+					a(href='/orders').brand | Заказы
+				li
+					a(href='/place-order').brand | Сделать заказ
+				if user.is_admin
+					li
+						a(href='/manage-orders').brand | Рассмотреть заказы
+			button#btn-logout.btn.btn-primary
+				i.icon-lock.icon-white
+				| Sign Out

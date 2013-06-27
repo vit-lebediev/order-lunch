@@ -1,0 +1,24 @@
+#order-form-container
+	form(method="post")#order-form.form-horizontal.well.span6
+		h1 Сделать заказ
+		hr
+		fieldset
+			#menu-url-cg.control-group
+				label.control-label.wide.long(for="menu-url-tf") От куда заказываем ? (ссылка на меню)
+				.controls
+					input#menu-url-tf.input-xlarge(type="text", name="menu-url", value="")
+			#first-course-cg.control-group
+				label.control-label.wide(for="first-course-tf") Первое
+				.controls
+					input#first-course-tf.input-xlarge(type="text", name="first-course", value="")
+			#second-course-cg.control-group
+				label.control-label.wide(for="second-course-tf") Второе
+				.controls
+					input#second-course-tf.input-xlarge(type="text", name="second-course", value="")
+			#additional-notes-cg.control-group
+				label.control-label.wide.long(for="additional-notes-tf") Дополнительно (салаты, пожелания)
+				.controls
+					textarea#additional-notes-tf.input-xlarge(name="additional-notes", value="")
+			hr
+			.form-actions
+				button(type="submit")#orders-form-btn.btn Заказать
