@@ -14,7 +14,7 @@
 
 ***
 
-####Node-Login is built on top of the following libraries :
+####Order-Lunch is built on top of the following libraries :
 
 * [Node.js](http://nodejs.org/) - Application Server
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
