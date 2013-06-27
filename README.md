@@ -19,6 +19,8 @@
 * [Node.js](http://nodejs.org/) - Application Server
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
 * [MongoDb](http://www.mongodb.org/) - Database Storage
+* [Node Mongo Native](https://github.com/mongodb/node-mongodb-native) - Node.js MongoDB adapter
+* [Node Mongo Join](https://github.com/cbumgard/node-mongo-join) - Node.js MongoDB document joiner
 * [Jade](http://jade-lang.com/) - HTML Templating Engine
 * [Stylus](http://learnboost.github.com/stylus/) - CSS Preprocessor
 * [EmailJS](http://github.com/eleith/emailjs) - Node.js > SMTP Server Middleware

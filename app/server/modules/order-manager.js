@@ -2,10 +2,11 @@ var MongoDB 	= require('mongodb').Db;
 var Server 		= require('mongodb').Server;
 var ObjectID 	= require('mongodb').ObjectID;
 var moment 		= require('moment');
+var Join		= require('mongo-join').Join;
 
 var dbPort 		= 27017;
 var dbHost 		= 'localhost';
-var dbName 		= 'node-login';
+var dbName 		= 'order-lunch';
 
 /* establish the database connection */
 
@@ -29,14 +30,22 @@ exports.placeOrder = function (order, callback)
 }
 
 exports.getOrdersForUser = function (user, callback) {
-	orders.find({user: user}, {limit: 50}).sort({ created: -1 }).toArray(function(error, results) {
+	orders.find({user_id: user._id}, {limit: 50}).sort({ created: -1 }).toArray(function(error, results) {
 		callback(error, results);
 	});
 }
 
 exports.getAllOrders = function (callback) {
-	orders.find(null, {limit: 50}).sort({ created: -1 }).toArray(function(error, results) {
-		callback(error, results);
+	orders.find({}, {limit: 50, sort: {created: -1}}, function(err, cursor) {
+		var join = new Join(db).on({
+			field: 'user_id',
+			as: 'user',
+			to: '_id',
+			from: 'accounts'
+		});
+		join.toArray(cursor, function(err, orders) {
+			callback(err, orders);
+		});
 	});
 }
 

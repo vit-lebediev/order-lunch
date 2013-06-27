@@ -216,7 +216,7 @@ module.exports = function(app) {
 				first_course: req.param('first-course'),
 				second_course: req.param('second-course'),
 				additional_notes: req.param('additional-notes'),
-				user: req.session.user
+				user_id: req.session.user._id
 			}, function(e){
 				if (e){
 					res.send(e, 400);
