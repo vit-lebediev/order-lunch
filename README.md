@@ -30,7 +30,7 @@
 ####Installation & Setup
 This assumes you already have node.js & npm installed.
 ```
-git clone git://github.com/braitsch/node-login.git node-login
+git clone git@github.com:Malgin/order-lunch.git order-lunch
 cd node-login
 npm install -d
 node app
