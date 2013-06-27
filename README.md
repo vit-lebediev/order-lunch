@@ -27,10 +27,6 @@
 
 ***
 
-A [Live Demo](http://node-login.braitsch.io) and [some thoughts about the app's architecture.](http://www.quietless.com/kitchen/building-a-login-system-in-node-js-and-mongodb/)
-
-***
-
 ####Installation & Setup
 This assumes you already have node.js & npm installed.
 ```
