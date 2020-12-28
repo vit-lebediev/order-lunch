@@ -1,6 +1,6 @@
-#Order Lunch
+# Order Lunch
 
-####A simple application which allows to order lunch, and manage orders
+#### A simple application which allows to order lunch, and manage orders
 
 * New User Account Creation
 * Secure Password Reset via Email
@@ -14,7 +14,7 @@
 
 ***
 
-####Order-Lunch is built on top of the following libraries :
+#### Order-Lunch is built on top of the following libraries :
 
 * [Node.js](http://nodejs.org/) - Application Server
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
@@ -29,7 +29,7 @@
 
 ***
 
-####Installation & Setup
+#### Installation & Setup
 This assumes you already have node.js & npm installed.
 ```
 git clone git@github.com:Malgin/order-lunch.git order-lunch
